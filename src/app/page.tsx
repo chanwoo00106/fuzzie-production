@@ -1,3 +1,4 @@
+import { HeroParallax } from "@/components/global/ConnectParallax";
 import { ContainerScroll } from "@/components/global/ContainerScrollAnimation";
 import { InfiniteMovingCards } from "@/components/global/InfiniteMovingCards";
 import Navbar from "@/components/global/Navbar";
@@ -35,6 +36,10 @@ export default function Home() {
         direction="right"
         speed="slow"
       />
+
+      <section>
+        <HeroParallax products={products}></HeroParallax>
+      </section>
     </main>
   );
 }
