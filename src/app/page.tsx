@@ -1,6 +1,8 @@
 import { ContainerScroll } from "@/components/global/ContainerScrollAnimation";
+import { InfiniteMovingCards } from "@/components/global/InfiniteMovingCards";
 import Navbar from "@/components/global/Navbar";
 import { Button } from "@/components/ui/button";
+import { clients, products } from "@/lib/constant";
 
 export default function Home() {
   return (
@@ -27,6 +29,12 @@ export default function Home() {
           }
         />
       </section>
+      <InfiniteMovingCards
+        className="md:mt-[18rem] mt-[-100px]"
+        items={clients}
+        direction="right"
+        speed="slow"
+      />
     </main>
   );
 }
