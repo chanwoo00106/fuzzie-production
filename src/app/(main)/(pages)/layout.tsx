@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Sidebar from "@/components/sidebar";
 
 interface Props {
   children: ReactNode;
@@ -7,9 +6,8 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="flex overflow-hidden h-screen">
-      <Sidebar />
-      <div className="w-full">{children}</div>
+    <div className="border-x-[1px] pb-20 h-screen rounded-l-3xl border-muted-foreground/20 overflow-scroll">
+      {children}
     </div>
   );
 };
